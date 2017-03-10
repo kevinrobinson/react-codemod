@@ -232,10 +232,8 @@ module.exports = function(file, api, options) {
     }
   };
 
-  if (
-    options['explicit-require'] === false ||
-    ReactUtils.hasReact(root)
-  ) {
+  // KR: Change this since it can't detect React module import
+  if (true) {
     const mutations = root
       .find(j.CallExpression, {
         callee: {
